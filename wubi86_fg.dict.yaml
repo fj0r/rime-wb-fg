@@ -48,6 +48,7 @@ encoder:
 式	aad
 葚	aad
 匞	aad
+工友	aadc
 蘛	aade
 工厂	aadg
 落荒而逃	aadi
@@ -145,6 +146,7 @@ encoder:
 劳燕分飞	aawn
 欧共体	aaws
 工作	aawt
+工位	aawu
 工分	aawv
 匶	aawv
 工人	aaww
@@ -1327,6 +1329,7 @@ encoder:
 划清	ajig
 划水	ajii
 蓝光	ajiq
+蓝海	ajit
 草	ajj
 菖	ajjf
 剒	ajjh
@@ -4310,6 +4313,7 @@ Bug	bugg
 限于	bvgf
 限止	bvhh
 孻	bvhl
+限流	bviy
 限时	bvjf
 限量	bvjg
 限电	bvjn
@@ -4478,6 +4482,7 @@ Bug	bugg
 聤	byps
 防空	bypw
 孩提	byrj
+防抖	byru
 防护	byry
 防备	bytl
 防务	bytl
@@ -4700,6 +4705,7 @@ Bug	bugg
 驈	ccbk
 騥	ccbs
 又	ccc
+叒	ccc
 双双	cccc
 又	cccc
 叕	cccc
@@ -5884,6 +5890,7 @@ Bug	bugg
 大专	ddfn
 大赦	ddfo
 大都	ddft
+大雾	ddft
 大增	ddfu
 大雪	ddfv
 大夫	ddfw
@@ -7229,8 +7236,8 @@ DIY	diyy
 页眉	dmnh
 面壁	dmnk
 碢	dmnk
-布局	dmnn
 而已	dmnn
+布局	dmnn
 硙	dmnn
 耐性	dmnt
 耐心	dmny
@@ -7407,6 +7414,7 @@ DIY	diyy
 迈拓	dnrd
 磖	dnrg
 成年	dnrh
+万年	dnrh
 大惊失色	dnrq
 砀	dnrt
 成材	dnsf
@@ -8552,6 +8560,7 @@ DIY	diyy
 豳	eem
 貒	eemj
 豳	eemk
+服服帖帖	eemm
 豽	eemw
 貑	eenc
 燹	eeo
@@ -13276,6 +13285,7 @@ DIY	diyy
 更有甚者	gdaf
 蚕茧	gdaj
 不厌其烦	gdao
+天际	gdbf
 天花	gdaw
 天险	gdbw
 蚕桑	gdcc
@@ -19112,6 +19122,7 @@ DIY	diyy
 敞开	imga
 注册表	imge
 游山玩水	imgi
+没事	imgk
 洞	imgk
 油画	imgl
 涄	imgn
@@ -24079,6 +24090,7 @@ DIY	diyy
 路标	khsf
 跳票	khsf
 跳槽	khsg
+中配	khsg
 中西	khsg
 跴	khsg
 蹅	khsg
@@ -26694,6 +26706,7 @@ DIY	diyy
 罛	lrcy
 軱	lrcy
 磛	lrdf
+暂存	lrdh
 暂且	lreg
 暂用	lret
 堑	lrf
@@ -34067,6 +34080,7 @@ DIY	diyy
 空气	pwrn
 窘迫	pwrp
 窥探	pwrp
+穷鬼	pwrq
 空白	pwrr
 穿插	pwrt
 空手	pwrt
@@ -34294,6 +34308,7 @@ DIY	diyy
 祦	pykd
 禪	pykf
 祌	pykh
+神器	pykk
 礼品	pykk
 社员	pykm
 祝	pykq
@@ -39970,6 +39985,7 @@ DIY	diyy
 忥	rnnu
 撰	rnnw
 所以	rnny
+扎心	rnny
 氮	rno
 气焊	rnoj
 氮	rnoo
@@ -51596,6 +51612,7 @@ U盘	uute
 北方	uxyy
 六	uy
 门	uy
+凉	uy
 辛苦	uyad
 凉菜	uyae
 凉鞋	uyaf
@@ -51626,6 +51643,7 @@ U盘	uute
 六	uygy
 门	uyh
 门	uyhn
+凉	uyi
 闵	uyi
 閔	uyi
 辩证法	uyif
@@ -51677,6 +51695,7 @@ U盘	uute
 门槛	uysj
 门楼	uyso
 辨析	uysr
+门禁	uyss
 门柱	uysy
 辨	uyt
 丷	uyt
@@ -51809,6 +51828,7 @@ U盘	uute
 嫷	vbde
 好感	vbdg
 好奇	vbds
+好用	vbet
 好胜	vbet
 好运	vbfc
 好坏	vbfg
@@ -53490,6 +53510,7 @@ U盘	uute
 公署	wclf
 公车	wclg
 俊男	wcll
+公网	wcmq
 公办	wclw
 信马由缰	wcmx
 翁	wcn
@@ -54162,6 +54183,7 @@ U盘	uute
 食不果腹	wgje
 傳	wgjf
 命题	wgjg
+全量	wgjg
 例题	wgjg
 倲	wgji
 倒映	wgjm
@@ -55278,6 +55300,7 @@ U盘	uute
 偬	wqrn
 伆	wqrt
 人多势众	wqrw
+低配	wqsg
 低档	wqsi
 像样	wqsu
 低矮	wqtd
@@ -60619,6 +60642,7 @@ U盘	uute
 高招	ymrv
 望风披靡	ymry
 高枝	ymsf
+高配	ymsg
 调配	ymsg
 设想	ymsh
 高档	ymsi
