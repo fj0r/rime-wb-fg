@@ -506,6 +506,7 @@ encoder:
 菔	aebc
 莩	aebf
 萉	aecb
+菜鸡	aecq
 萾	aecl
 薍	aecn
 莫须有	aede
@@ -3343,8 +3344,8 @@ encoder:
 取值	bcwf
 聚会	bcwf
 取舍	bcwf
-聚敛	bcwg
 聚合	bcwg
+聚敛	bcwg
 陖	bcwt
 聚众	bcww
 聚焦	bcwy
@@ -6056,6 +6057,7 @@ Bug	bugg
 布达佩斯	ddwa
 大有人在	ddwd
 餍	ddwe
+大佬	ddwf
 大会	ddwf
 大使	ddwg
 大侠	ddwg
@@ -6589,6 +6591,7 @@ Bug	bugg
 石棉	dgsr
 古板	dgsr
 石板	dgsr
+硬核	dgsy
 砞	dgsy
 厂	dgt
 丆	dgt
@@ -11710,6 +11713,7 @@ DIY	diyy
 亏待	fntf
 声息	fnth
 专利	fntj
+违和	fntk
 专程	fntk
 无以复加	fntl
 志向	fntm
@@ -12025,6 +12029,7 @@ DIY	diyy
 雪铁龙	fqdx
 井然有序	fqdy
 无须	fqed
+无脑	fqey
 元月	fqee
 无助	fqeg
 埆	fqeh
@@ -14383,6 +14388,7 @@ DIY	diyy
 带劲	gkca
 融通	gkce
 整套	gkdd
+带感	gkdg
 带有	gkde
 一哄而上	gkdh
 噩耗	gkdi
@@ -18774,6 +18780,7 @@ DIY	diyy
 水分	iiwv
 消化	iiwx
 水货	iiwx
+消停	iiwy
 消弭	iixb
 流水线	iixg
 消费	iixj
@@ -19188,6 +19195,8 @@ DIY	diyy
 洞穴	impw
 洞察	impw
 洞穿	impw
+少见多怪	imqn
+滑铲	imqu
 湍急	imqv
 沨	imqy
 油罐	imrm
@@ -20893,6 +20902,7 @@ DIY	diyy
 流感	iydg
 淳厚	iydj
 游历	iydl
+溜达	iydp
 海市蜃楼	iyds
 液态	iydy
 流言蜚语	iydy
@@ -24049,6 +24059,7 @@ DIY	diyy
 贵客	khpt
 踏实	khpu
 忠实	khpu
+跪安	khpv
 遗容	khpw
 跎	khpx
 遗祸	khpy
@@ -28718,6 +28729,7 @@ DIY	diyy
 内分泌	mwin
 几何学	mwip
 内河	mwis
+内省	mwit
 岕	mwjj
 冏	mwkd
 内因	mwld
@@ -32198,6 +32210,7 @@ DIY	diyy
 数秒	ovti
 数	ovty
 数次	ovuq
+数仓	ovwb
 数值	ovwf
 数个	ovwh
 数位	ovwu
@@ -33697,6 +33710,7 @@ DIY	diyy
 被捕	purg
 袙	purg
 袾	puri
+实操	purk
 被扣	purk
 褫	purm
 实据	purn
@@ -34235,6 +34249,7 @@ DIY	diyy
 神通	pyce
 神圣	pycf
 祃	pycg
+神马	pycn
 察言观色	pycq
 禡	pycy
 祷	pyd
@@ -35846,6 +35861,7 @@ DIY	diyy
 名字	qkpb
 名家	qkpe
 名额	qkpt
+免礼	qkpy
 免	qkq
 免	qkqb
 鸲	qkqg
@@ -37048,6 +37064,7 @@ DIY	diyy
 獾	qtay
 犯	qtb
 儿子	qtbb
+锤子	qtbb
 狮子	qtbb
 猴子	qtbb
 独生子	qtbb
@@ -37972,6 +37989,7 @@ DIY	diyy
 粂	qyou
 留守	qypf
 解放军	qypl
+留空	qypw
 留宿	qypw
 留神	qypy
 贸然	qyqd
@@ -37980,6 +37998,7 @@ DIY	diyy
 狼狈	qyqm
 镀金	qyqq
 久久	qyqy
+留白	qyrr
 留校	qysu
 卵	qyt
 孵	qytb
@@ -38386,6 +38405,7 @@ DIY	diyy
 挨	rct
 抬升	rcta
 反季	rctb
+反智	rctd
 挨	rctd
 返航	rcte
 返迁	rctf
@@ -61529,6 +61549,7 @@ U盘	uute
 麻油	ysim
 魔掌	ysip
 麻雀	ysiw
+麻溜	ysiy
 谭	ysj
 谭	ysjh
 譚	ysjh
