@@ -5,6 +5,10 @@ customization:
   modified_time: "Wed Apr 28 11:42:29 2021"
   rime_version: 1.5.3
 patch:
+  speller:
+    max_code_length: 4                      # 最长 4 码
+    auto_select: true                       # 顶字上屏
+    auto_select_unique_candidate: true      # 无重码自动上屏
   ascii_composer:
     good_old_caps_lock: true
     switch_key: {Caps_Lock: commit_code, Control_L: noop, Control_R: noop, Shift_L: commit_code, Shift_R: commit_code}
