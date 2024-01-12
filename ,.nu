@@ -20,12 +20,16 @@ $env.comma_scope = {|_|{
             let s = $in | split row ':'
             {value: $s.0, description: $s.1}
         }
-        | append ''
+        | prepend $'--- ($code)'
     }
     get_code: {|word, file|
         let chars = $word | split row '' | filter { $in != '' }
         let code = match ($chars | length) {
-            1 => {}
+            1 => {
+                [
+                    [0 0..4]
+                ]
+            }
             2 => {
                 [
                     [0 0..2]
@@ -83,10 +87,12 @@ $env.comma = {|_|{
     }
     setup: {
         linux: {
-            sudo cp -f wubi86_fg* pinyin_simp* /usr/share/rime-data/
-            sudo cp -f default.yaml /usr/share/rime-data/default.yaml
-            # sudo yq -i e '.schema_list[0].schema="wubi86_fg_pinyin"' /usr/share/rime-data/default.yaml
-            sudo rime_deployer --build ~/.config/ibus/rime /usr/share/rime-data ~/.config/ibus/rime/build
+            ibus: {
+                sudo cp -f wubi86_fg* pinyin_simp* /usr/share/rime-data/
+                sudo cp -f default.yaml /usr/share/rime-data/default.yaml
+                # sudo yq -i e '.schema_list[0].schema="wubi86_fg_pinyin"' /usr/share/rime-data/default.yaml
+                sudo rime_deployer --build ~/.config/ibus/rime /usr/share/rime-data ~/.config/ibus/rime/build
+            }
         }
     }
     dict: {
