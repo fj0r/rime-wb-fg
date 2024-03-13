@@ -15,12 +15,15 @@ $env.comma_scope = {|_|{
             }
             $i -= 1
         }
-        $lns
+        let lst = $lns
         | each {
             let s = $in | split row ':'
-            {value: $s.0, description: $s.1}
+            {value: ($s.0 | into int), description: $s.1}
         }
-        | prepend $'--- ($code)'
+        [
+            ...$lst
+            {value: (($lst | last).value + 1), description: $code}
+        ]
     }
     get_code: {|word, file|
         let chars = $word | split row '' | filter { $in != '' }
@@ -75,16 +78,6 @@ $env.comma_scope = {|_|{
 }}
 
 $env.comma = {|_|{
-    created: {|a, s| $s.computed }
-    inspect: {|a, s| {index: $_, scope: $s, args: $a} | table -e }
-    vscode-tasks: {
-        $_.a: {
-            mkdir .vscode
-            ', --vscode -j' | batch ',.nu' | save -f .vscode/tasks.json
-        }
-        $_.d: "generate .vscode/tasks.json"
-        $_.w: { glob: ',.nu' }
-    }
     setup: {
         linux: {
             ibus: {
@@ -110,5 +103,18 @@ $env.comma = {|_|{
             }
         }
         get_code: {|a,s| do $s.get_code $a.0 $s.wubi86 }
+        search: {|a,s| do $s.search $a.0 $s.wubi86 }
+    }
+    .: {
+        created: {|a, s| $s.computed }
+        inspect: {|a, s| {index: $_, scope: $s, args: $a} | table -e }
+        vscode-tasks: {
+            $_.a: {
+                mkdir .vscode
+                ', --vscode -j' | batch ',.nu' | save -f .vscode/tasks.json
+            }
+            $_.d: "generate .vscode/tasks.json"
+            $_.w: { glob: ',.nu' }
+        }
     }
 }}
