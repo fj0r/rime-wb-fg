@@ -25,7 +25,7 @@ $env.comma = {|_|{
     mut i = ($code | str length)
     loop {
         if $i == 0 { break }
-        let t = $code | str substring 0..$i
+        let t = $code | str substring 0..<$i
         let r = (rg -n $"\\s($t)" $file | lines)
         if not ($r | is-empty) {
             $lns = $r
@@ -49,28 +49,28 @@ $env.comma = {|_|{
     let chars = $word | split row '' | filter { $in != '' }
     let code = match ($chars | length) {
         1 => [
-                [0 0..4]
+                [0 0..<4]
         ]
         2 => [
-                [0 0..2]
-                [1 0..2]
+                [0 0..<2]
+                [1 0..<2]
         ]
         3 => [
-                [0 0..1]
-                [1 0..1]
-                [2 0..2]
+                [0 0..<1]
+                [1 0..<1]
+                [2 0..<2]
         ]
         4 => [
-                [0 0..1]
-                [1 0..1]
-                [2 0..1]
-                [3 0..1]
+                [0 0..<1]
+                [1 0..<1]
+                [2 0..<1]
+                [3 0..<1]
        ]
         _ => [
-                [0 0..1]
-                [1 0..1]
-                [2 0..1]
-                [(-1) 0..1]
+                [0 0..<1]
+                [1 0..<1]
+                [2 0..<1]
+                [(-1) 0..<1]
        ]
     }
     $code
