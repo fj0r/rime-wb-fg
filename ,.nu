@@ -86,7 +86,7 @@ $env.comma = {|_|{
     | str join ''
 }
 
-'setup linux ibus'
+'setup linux'
 | comma fun {
     sudo cp -f wubi86_fg* pinyin_simp* /usr/share/rime-data/
     sudo cp -f default.yaml /usr/share/rime-data/default.yaml
