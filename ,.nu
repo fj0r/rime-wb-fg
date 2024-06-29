@@ -78,7 +78,13 @@ $env.comma = {|_|{
         let c = if $x.0 == (-1) { $chars | last } else { $chars | get $x.0 }
         rg $'^($c)\s' $file
         | lines
-        | last
+        | reduce -f '' {|i,a|
+            if ($i | str length) > ($a | str length) {
+                $i
+            } else {
+                $a
+            }
+        }
         | split row (char tab)
         | get 1
         | str substring $x.1
