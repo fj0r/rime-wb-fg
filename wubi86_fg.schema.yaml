@@ -44,9 +44,15 @@ engine:
     - reverse_lookup_translator
     - table_translator
     - lua_translator@date_translator # 自定义系统变量输出
+    - history_translator@history
   filters:
     # - lua_filter@single_char_first_filter # 单字优先方法
 
+# Z键重复
+history:
+  input: z
+  size: 3
+  initial_quality: 10000
 speller:
   max_code_length: 4                    # 四码上屏
   auto_select: true                     # 自动上屏
@@ -62,7 +68,11 @@ translator:
 #    - xform/.+//
   comment_format:                       # 提示码自定义
     - xform/.+//                        # 配置：消除所有候选词后的提示码
-
+  encode_commit_history: false          # 是否对已上屏的词自动上屏
+  max_phrase_length: 10                 # 单词最大词长
+  db_class: tabledb                     # userdb - 二进制 / tabledb - 人类语言
+  disable_user_dict_for_patterns:       # z开头的输入忽略，对应下面的拼音反查，
+    - "^z.*$"
 
 reverse_lookup:
   dictionary: pinyin_simp
