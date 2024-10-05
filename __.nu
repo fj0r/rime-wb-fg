@@ -1,26 +1,8 @@
-$env.comma_scope = {|_|{
-    created: '2024-01-02{2}15:07:18'
-    computed: {$_.computed:{|a, s| $'($s.created)($a)' }}
+const s = {
     wubi86: 'wubi86_fg.dict.yaml'
-}}
+}
 
-$env.comma = {|_|{
-    .: {
-        created: {|a, s| $s.computed }
-        inspect: {|a, s| {index: $_, scope: $s, args: $a} | table -e }
-        vscode-tasks: {
-            $_.a: {
-                mkdir .vscode
-                ', --vscode -j' | batch ',.nu' | save -f .vscode/tasks.json
-            }
-            $_.d: "generate .vscode/tasks.json"
-            $_.w: { glob: ',.nu' }
-        }
-    }
-}}
-
-'search'
-| comma val null {|code, file|
+export def 'search' [code, file] {
     mut lns = []
     mut i = ($code | str length)
     loop {
@@ -44,8 +26,7 @@ $env.comma = {|_|{
     ]
 }
 
-'get_code'
-| comma val null {|word, file|
+export def 'get_code' [word, file] {
     let chars = $word | split row '' | filter { $in != '' }
     let code = match ($chars | length) {
         1 => [
@@ -92,8 +73,7 @@ $env.comma = {|_|{
     | str join ''
 }
 
-'setup linux'
-| comma fun {
+export def 'setup linux' [] {
     sudo cp -f wubi86_fg* pinyin_simp* /usr/share/rime-data/
     sudo cp -f default.yaml /usr/share/rime-data/default.yaml
     sudo cp -f default.custom.yaml /usr/share/rime-data/default.custom.yaml
@@ -101,21 +81,17 @@ $env.comma = {|_|{
     sudo rime_deployer --build ~/.config/ibus/rime /usr/share/rime-data ~/.config/ibus/rime/build
 }
 
-'dict wubi86'
-| comma fun {|a,s|
-    let word = $a.0
-    let code = do $s.get_code $word $s.wubi86
-    let offset = $a.1
-    pp sed -i $'($offset) i ($word)(char tab)($code)' $s.wubi86
-} {
-    cmp: {|a,s|
-        let code = do $s.get_code $a.0 $s.wubi86
-        do $s.search $code $s.wubi86
-    }
+def cmpl-dict [ctx] {
+    let x = $ctx | argx parse
+    let code = get_code $x.pos.word $s.wubi86
+    search $code $s.wubi86
 }
 
-'dict get_code'
-| comma fun {|a,s| do $s.get_code $a.0 $s.wubi86 }
+export def 'dict wubi86' [word offset:string@cmpl-dict] {
+    let code = do $s.get_code $word $s.wubi86
+    pp sed -i $'($offset) i ($word)(char tab)($code)' $s.wubi86
+}
 
-'dict search'
-| comma fun {|a,s| do $s.search $a.0 $s.wubi86 }
+export def 'dict get_code' [word] { get_code $word $s.wubi86 }
+
+export def 'dict search' [word] { search $word $s.wubi86 }
