@@ -88,7 +88,7 @@ def cmpl-dict [ctx] {
 }
 
 export def 'dict wubi86' [word offset:string@cmpl-dict] {
-    let code = do $s.get_code $word $s.wubi86
+    let code = get_code $word $s.wubi86
     pp sed -i $'($offset) i ($word)(char tab)($code)' $s.wubi86
 }
 
