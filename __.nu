@@ -95,3 +95,12 @@ export def 'dict wubi86' [word offset:string@cmpl-dict] {
 export def 'dict get_code' [word] { get_code $word $s.wubi86 }
 
 export def 'dict search' [word] { search $word $s.wubi86 }
+
+
+export def git-hooks [act ctx] {
+    if $act == 'pre-push' and $ctx.repo == 'git@iffy.me:infra/rime-wubi.git' {
+        use lg
+        lg level 2 'setup linux'
+        setup linux
+    }
+}
