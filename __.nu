@@ -1,7 +1,3 @@
-const s = {
-    wubi86: 'wubi86_fg.dict.yaml'
-}
-
 export def 'search' [code, file] {
     mut lns = []
     mut i = ($code | str length)
@@ -83,18 +79,18 @@ export def 'setup linux' [] {
 
 def cmpl-dict [ctx] {
     let x = $ctx | argx parse
-    let code = get_code $x.pos.word $s.wubi86
-    search $code $s.wubi86
+    let code = get_code $x.pos.word $env.wubi86
+    search $code $env.wubi86
 }
 
 export def 'dict wubi86' [word offset:string@cmpl-dict] {
-    let code = get_code $word $s.wubi86
-    pp sed -i $'($offset) i ($word)(char tab)($code)' $s.wubi86
+    let code = get_code $word $env.wubi86
+    pp sed -i $'($offset) i ($word)(char tab)($code)' $env.wubi86
 }
 
-export def 'dict get_code' [word] { get_code $word $s.wubi86 }
+export def 'dict get_code' [word] { get_code $word $env.wubi86 }
 
-export def 'dict search' [word] { search $word $s.wubi86 }
+export def 'dict search' [word] { search $word $env.wubi86 }
 
 
 export def git-hooks [act ctx] {
