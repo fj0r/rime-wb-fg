@@ -1,4 +1,4 @@
-export def 'search' [code, file] {
+def search [code, file] {
     mut lns = []
     mut i = ($code | str length)
     loop {
@@ -22,7 +22,7 @@ export def 'search' [code, file] {
     ]
 }
 
-export def 'get_code' [word, file] {
+def 'get_code' [word, file] {
     let chars = $word | split row '' | filter { $in != '' }
     let code = match ($chars | length) {
         1 => [
@@ -83,14 +83,19 @@ def cmpl-dict [ctx] {
     search $code $env.wubi86
 }
 
-export def 'dict wubi86' [word offset:string@cmpl-dict] {
+def cmpl-dummy [] {[]}
+
+export def wubi86 [
+    word: string@cmpl-dummy
+    offset: string@cmpl-dict
+] {
     let code = get_code $word $env.wubi86
-    pp sed -i $'($offset) i ($word)(char tab)($code)' $env.wubi86
+    sed -i $'($offset) i ($word)(char tab)($code)' $env.wubi86
 }
 
-export def 'dict get_code' [word] { get_code $word $env.wubi86 }
+export def code [word] { get_code $word $env.wubi86 }
 
-export def 'dict search' [word] { search $word $env.wubi86 }
+export def find [word] { search $word $env.wubi86 }
 
 
 export def git-hooks [act ctx] {
