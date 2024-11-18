@@ -78,7 +78,7 @@ export def 'setup linux' [] {
 }
 
 def cmpl-dict [ctx] {
-    let x = $ctx | argx parse
+    let x = $ctx | argx parse -p
     let code = get_code $x.pos.word $env.wubi86
     search $code $env.wubi86
 }
