@@ -23,7 +23,7 @@ def search [code, file] {
 }
 
 def 'get_code' [word, file] {
-    let chars = $word | split row '' | filter { $in != '' }
+    let chars = $word | split row '' | where { $in != '' }
     let code = match ($chars | length) {
         1 => [
                 [0 0..<4]
