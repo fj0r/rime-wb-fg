@@ -98,7 +98,7 @@ export def code [word] { get_code $word $env.wubi86 }
 export def find [word] { search $word $env.wubi86 }
 
 
-export def git-hooks [act ctx] {
+export def _git-hooks [act ctx] {
     if $act == 'pre-push' and $ctx.repo == 'git@iffy.me:infra/rime-wubi.git' {
         use lg
         lg level 2 'setup linux'
